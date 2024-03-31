@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int scoreL = 0;
+    public int scoreR = 0;
+    public Text pointL;
+    public Text pointR;
+
+    public void AddScoreL()
     {
-        
+        scoreL++;
+        pointL.text = scoreL.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddScoreR()
     {
-        
+        scoreR++;
+        pointR.text = scoreR.ToString();
     }
 }
+
