@@ -7,6 +7,7 @@ public class Pmove : MonoBehaviour
     public Rigidbody2D rbL;
     public Rigidbody2D rbR;
     public float speed = 10f;
+    public bool over = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,13 +30,13 @@ public class Pmove : MonoBehaviour
     {
         // PL
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && over == false)
             rbL.velocity = Vector2.up * speed;
 
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) && over == false)
             rbL.velocity = Vector2.down * speed;
             
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.D) && over == false)
         {
             rbL.velocity = Vector2.right * (speed * 2);
             Invoke(nameof(PLmove), 0.05f);
@@ -43,13 +44,13 @@ public class Pmove : MonoBehaviour
 
         // PR
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && over == false)
             rbR.velocity = Vector2.up * speed;
 
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow) && over == false)
             rbR.velocity = Vector2.down * speed;
 
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && over == false)
         {
             rbR.velocity = Vector2.left * (speed * 2);
             Invoke(nameof(PRmove), 0.05f);

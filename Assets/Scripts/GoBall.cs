@@ -7,8 +7,7 @@ public class GoBall : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 4f;
 
-    // Start is called before the first frame update
-    void Start()
+    void StartBall()
     {
         float rand = Random.Range(0, 2);
 
@@ -19,9 +18,21 @@ public class GoBall : MonoBehaviour
             rb.velocity = Vector2.left * speed;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    void Start()
     {
-        
+        Invoke("StartBall", 2);
+    }
+
+    public void ResetBall()
+    {
+        rb.velocity = Vector2.zero;
+        transform.position = Vector2.zero;
+    }
+
+    public void RestartGame()
+    {
+        ResetBall();
+        Invoke("StartBall", 2);
     }
 }
