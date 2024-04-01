@@ -13,6 +13,8 @@ public class SceneManagement : MonoBehaviour
     public Pmove PLMove;
     public Pmove PRMove;
     public GameObject GO;
+    public GameObject OrWin;
+    public GameObject BlWin;
     public GameObject Ball;
 
     public void ChangeScene (string sceneName)
@@ -27,9 +29,21 @@ public class SceneManagement : MonoBehaviour
 
     public void Update()
     {
-        if (scoring.scoreL == 7 || scoring.scoreR == 7)
+        if (scoring.scoreL == 7)
         {
             GO.SetActive (true);
+            BlWin.SetActive (true);
+
+            PLMove.over = true;
+            PRMove.over = true;
+
+            Ball.SetActive (false);
+        
+        } else if (scoring.scoreR == 7) 
+        {
+            GO.SetActive (true);
+            OrWin.SetActive (true);
+
             PLMove.over = true;
             PRMove.over = true;
 
@@ -52,6 +66,8 @@ public class SceneManagement : MonoBehaviour
 
         Ball.SetActive(true);
         GO.SetActive(false);
+        OrWin.SetActive (false);
+        BlWin.SetActive (false);
 
         PLMove.over = false;
         PRMove.over = false;
