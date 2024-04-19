@@ -35,4 +35,9 @@ public class GoBall : MonoBehaviour
         ResetBall();
         Invoke("StartBall", 2);
     }
+
+    private void Update()
+    {
+        rb.velocity = new Vector2 (Mathf.Clamp(rb.velocity.x, -30f, 30f), Mathf.Clamp(rb.velocity.y, -15f, 15f));
+    }
 }

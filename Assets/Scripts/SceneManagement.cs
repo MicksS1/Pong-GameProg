@@ -53,23 +53,25 @@ public class SceneManagement : MonoBehaviour
 
     public void RestartG()
     {
-        goball.RestartGame();
+        //goball.RestartGame();
 
-        PL.transform.position = new Vector2(-8.294f, 0);
-        PR.transform.position = new Vector2(8.294f, 0);
+        //PL.transform.position = new Vector2(-8.294f, 0);
+        //PR.transform.position = new Vector2(8.294f, 0);
 
-        scoring.scoreL = 0;
-        scoring.scoreR = 0;
+        //scoring.scoreL = 0;
+        //scoring.scoreR = 0;
 
-        scoring.pointL.text = scoring.scoreL.ToString();
-        scoring.pointR.text = scoring.scoreR.ToString();
+        //scoring.pointL.text = scoring.scoreL.ToString();
+        //scoring.pointR.text = scoring.scoreR.ToString();
 
-        Ball.SetActive(true);
-        GO.SetActive(false);
-        OrWin.SetActive (false);
-        BlWin.SetActive (false);
+        //Ball.SetActive(true);
+        //GO.SetActive(false);
+        //OrWin.SetActive (false);
+        //BlWin.SetActive (false);
 
-        PLMove.over = false;
-        PRMove.over = false;
+        //PLMove.over = false;
+        //PRMove.over = false;
+
+        SceneManager.LoadScene("GameScene");
     }
 }
