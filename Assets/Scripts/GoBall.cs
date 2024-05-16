@@ -39,5 +39,14 @@ public class GoBall : MonoBehaviour
     private void Update()
     {
         rb.velocity = new Vector2 (Mathf.Clamp(rb.velocity.x, -30f, 30f), Mathf.Clamp(rb.velocity.y, -15f, 15f));
+
+        if (rb.velocity.x >= 10f || rb.velocity.x <= -10f)
+        {
+            rb.drag = 0.1f;
+        }
+        else
+        {
+            rb.drag = 0f;
+        }
     }
 }

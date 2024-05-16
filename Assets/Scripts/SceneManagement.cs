@@ -12,10 +12,12 @@ public class SceneManagement : MonoBehaviour
     public Scoring scoring;
     public Pmove PLMove;
     public Pmove PRMove;
+    public BotMove BMove;
     public GameObject GO;
     public GameObject OrWin;
     public GameObject BlWin;
     public GameObject Ball;
+    public int ScoreToWin = 7;
 
     public void ChangeScene (string sceneName)
     {
@@ -29,25 +31,37 @@ public class SceneManagement : MonoBehaviour
 
     public void Update()
     {
-        if (scoring.scoreL == 7)
+
+        if (scoring.scoreL >= ScoreToWin)
         {
             GO.SetActive (true);
             BlWin.SetActive (true);
 
             PLMove.over = true;
-            PRMove.over = true;
 
-            Ball.SetActive (false);
+            if (PRMove != null)
+                PRMove.over = true;
+
+            if (BMove != null)
+                BMove.BotOver = true;
+            
+            Ball.SetActive(false);
+        }
         
-        } else if (scoring.scoreR == 7) 
+        if (scoring.scoreR >= ScoreToWin) 
         {
             GO.SetActive (true);
             OrWin.SetActive (true);
 
             PLMove.over = true;
-            PRMove.over = true;
 
-            Ball.SetActive (false);
+            if (PRMove != null)
+                PRMove.over = true;
+
+            if (BMove != null)
+                BMove.BotOver = true;
+
+            Ball.SetActive(false);
         }
     }
 
@@ -73,5 +87,10 @@ public class SceneManagement : MonoBehaviour
         //PRMove.over = false;
 
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void RestartPvC()
+    {
+        SceneManager.LoadScene("PvCScene");
     }
 }

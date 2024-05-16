@@ -134,10 +134,10 @@ GameObject:
   - component: {fileID: 258902418}
   - component: {fileID: 258902417}
   - component: {fileID: 258902415}
-  - component: {fileID: 258902419}
   - component: {fileID: 258902416}
+  - component: {fileID: 258902420}
   m_Layer: 0
-  m_Name: PR
+  m_Name: Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &258902419
+--- !u!114 &258902420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,13 +297,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 258902414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0125841930fa6d94a8a5a8580be1f0ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 339fa0f031b42d0488063119946dfd80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbL: {fileID: 904422536}
-  rbR: {fileID: 258902415}
-  speed: 10
-  over: 0
+  Ball: {fileID: 1710485182}
+  Bot: {fileID: 258902415}
+  Speed: 10
+  BotOver: 0
 --- !u!1 &344553630
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,16 +707,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goball: {fileID: 1710485187}
   PL: {fileID: 904422535}
-  PR: {fileID: 258902414}
+  PR: {fileID: 0}
   scoring: {fileID: 344553631}
   PLMove: {fileID: 904422540}
-  PRMove: {fileID: 258902419}
-  BMove: {fileID: 0}
+  PRMove: {fileID: 0}
+  BMove: {fileID: 258902420}
   GO: {fileID: 1121341375}
   OrWin: {fileID: 1060415663}
   BlWin: {fileID: 1758884529}
   Ball: {fileID: 1710485182}
-  score: 1
 --- !u!1 &801158001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbL: {fileID: 904422536}
-  rbR: {fileID: 258902415}
+  rbR: {fileID: 0}
   speed: 10
   over: 0
 --- !u!1001 &997677287
@@ -2938,7 +2937,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 691224409}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
-        m_MethodName: RestartG
+        m_MethodName: RestartPvC
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
