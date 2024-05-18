@@ -7,16 +7,27 @@ public class BotMove : MonoBehaviour
 {
     public GameObject Ball;
     public Rigidbody2D Bot;
-    private int Speed = 10;
+    public int Speed = 10;
+    public float difficulty = 0.5f;
     public bool BotOver = false;
 
     // Update is called once per frame
+
+    void MoveUp()
+    {
+        Bot.velocity = Vector2.up * Speed;
+    }
+    void MoveDn()
+    {
+        Bot.velocity = Vector2.down * Speed;
+    }
+
     void Update()
     {
         if (Ball.transform.position.y > Bot.transform.position.y && BotOver == false)
-            Bot.velocity = Vector2.up * Speed;
-        
+            Invoke(nameof(MoveUp), difficulty);
+
         else if (Ball.transform.position.y < Bot.transform.position.y && BotOver == false)
-            Bot.velocity = Vector2.down * Speed;
+            Invoke(nameof(MoveDn), difficulty);
     }
 }
