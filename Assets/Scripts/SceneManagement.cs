@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ public class SceneManagement : MonoBehaviour
     public GameObject OrWin;
     public GameObject BlWin;
     public GameObject Ball;
-    public int ScoreToWin = 7;
+    public int ScoreToWin = 100;
 
     public void ChangeScene (string sceneName)
     {
@@ -89,8 +90,18 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
-    public void RestartPvC()
+    public void RestartPvC_Easy()
     {
-        SceneManager.LoadScene("PvCScene");
+        SceneManager.LoadScene("PvCScene_Easy");
+    }
+
+    public void RestartPvC_Med()
+    {
+        SceneManager.LoadScene("PvCScene_Med");
+    }
+
+    public void RestartPvC_Hard()
+    {
+        SceneManager.LoadScene("PvCScene_Hard");
     }
 }

@@ -30,10 +30,10 @@ public class Pmove : MonoBehaviour
     {
         // PL
 
-        if (Input.GetKey(KeyCode.W) && over == false)
+        if (Input.GetKeyDown(KeyCode.W) && over == false)
             rbL.velocity = Vector2.up * speed;
 
-        else if (Input.GetKey(KeyCode.S) && over == false)
+        else if (Input.GetKeyDown(KeyCode.S) && over == false)
             rbL.velocity = Vector2.down * speed;
             
         else if (Input.GetKeyDown(KeyCode.D) && over == false)
@@ -44,10 +44,10 @@ public class Pmove : MonoBehaviour
 
         // PR
 
-        if (Input.GetKey(KeyCode.UpArrow) && over == false)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && over == false)
             rbR.velocity = Vector2.up * speed;
 
-        else if (Input.GetKey(KeyCode.DownArrow) && over == false)
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && over == false)
             rbR.velocity = Vector2.down * speed;
 
         else if (Input.GetKeyDown(KeyCode.LeftArrow) && over == false)

@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
     guid: 04e120c8d55803741b5405c74ad1eb55
   - enabled: 1
-    path: Assets/Scenes/PvCScene.unity
+    path: Assets/Scenes/PvCScene_Easy.unity
     guid: d8e0ae313fb7fa8438f56c5b1ef06aa3
+  - enabled: 1
+    path: Assets/Scenes/PvCScene_Med.unity
+    guid: 957e5a3ba63e1e5489258a24ad355884
+  - enabled: 1
+    path: Assets/Scenes/PvCScene_Hard.unity
+    guid: c633466d428eb234d8dcb3a3eb6bbae3
   m_configObjects: {}
