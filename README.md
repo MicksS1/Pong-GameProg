@@ -10,15 +10,18 @@ The gameplay of Neon Pong is just like the classic game of Pong, but you can als
 
 <h3>Controls</h3>
 
+
 PvP Mode (P1):
 - W (up)
 - S (down)
 - D (smash)
 
+
 PvP Mode (P2):
 - UpArrow (up)
 - DownArrow (down)
 - LeftArrow (smash)
+
 
 PvC Mode:
 - W (up)
@@ -28,6 +31,3 @@ PvC Mode:
 <h3>Setup</h3>
 - If you want to play the game, make sure to download the "NeonPong-Built.zip" file
 - Extract the folder, and run the .exe file
-
-If you encounter problem, feel free to contact me
-Thank you
