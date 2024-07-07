@@ -9,10 +9,20 @@ Neon Pong is just a classic pong game that i created using unity. This game is v
 The gameplay of Neon Pong is just like the classic game of Pong, but you can also SMASH! You can play offline with a friend or you can try playing against bots with difficulty ranging from easy to hard.
 
 <h3>Controls</h3>
-PvP Mode (P1):         PvP Mode (P2):            PvC Mode:
-- W (up)               - UpArrow (up)            - W (up)
-- S (down)             - DownArrow (down)        - S (down)
-- D (smash)            - LeftArrow (smash)       - D (smash)
+PvP Mode (P1):       
+- W (up)
+- S (down)
+- D (smash)
+
+PvP Mode (P2):
+- UpArrow (up)
+- DownArrow (down)
+- LeftArrow (smash)
+
+PvC Mode:
+- W (up)
+- S (down)
+- D (smash)
 
 <h3>Setup</h3>
 - If you want to play the game, make sure to download the "NeonPong-Built.zip" file
