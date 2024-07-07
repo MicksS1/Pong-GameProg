@@ -29,5 +29,6 @@ PvC Mode:
 - D (smash)
 
 <h3>Setup</h3>
+
 - If you want to play the game, make sure to download the "NeonPong-Built.zip" file
-- Extract the folder, and run the .exe file
+- Extract the folder, then run the .exe file
